@@ -3,8 +3,8 @@
 class Imagen
 {
 
-    private $src;
-    private $border;
+    protected $src;
+    protected $border;
     private $ruta_images = 'images/';
 
     function __construct($src, $border = 0)
