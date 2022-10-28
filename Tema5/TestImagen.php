@@ -25,6 +25,11 @@
     echo $img2->__toString();
     echo "</br>";
 
+    echo "<h1>Test 3</h1>";
+    $img2->src = 'img3.jfif';
+    echo $img2->__toString();
+    var_dump($img2);
+
     ?>
 </body>
 
