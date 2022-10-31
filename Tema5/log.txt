@@ -1,9 +1,0 @@
-[E][28-10-22 04:27:16]: Ha habido un error inesperado
-[I][28-10-22 04:27:16]: Todo correcto
-[W][28-10-22 04:27:16]: Ha habido un warning
-[E][28-10-22 04:27:19]: Ha habido un error inesperado
-[I][28-10-22 04:27:19]: Todo correcto
-[W][28-10-22 04:27:19]: Ha habido un warning
-[E][28-10-22 04:28:08]: Ha habido un error inesperado
-[I][28-10-22 04:28:08]: Todo correcto
-[W][28-10-22 04:28:08]: Ha habido un warning
