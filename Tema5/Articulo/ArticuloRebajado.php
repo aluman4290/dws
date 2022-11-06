@@ -1,4 +1,5 @@
 <?php
+require("./Articulo.php");
 final class  ArticuloRebajado extends Articulo
 {
     private $rebaja  = 0;
@@ -17,12 +18,12 @@ final class  ArticuloRebajado extends Articulo
 
     public function precioRebajado()
     {
-        return $this->precio - $this->calculaDescuento();
+        return $this->articulo->precio - $this->calculaDescuento();
     }
 
     public function __toString()
     {
-        return $this->articulo->__toString() . '</br>'
+        return $this->articulo->__toString()
             . 'La rebaja es: ' . $this->rebaja . ' %' . '</br>'
             . 'El descuento es ' . self::calculaDescuento() . '€';
     }
