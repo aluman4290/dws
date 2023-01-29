@@ -3,6 +3,9 @@
 {% block title %}
 	Home
 {% endblock %}
+{% block javascripts %}
+	<script src="/js/random.cite.js"></script>
+{% endblock %}
 
 {% block body %}
 	<body>
@@ -13,10 +16,18 @@
 			<div class="bg-light p-5 rounded">
 				<h1>Symfony Project</h1>
 				<p class="lead">Desarrollo web en entorno servidor. </p>
+				<br>
 				<p class="lead">Admin user: admin@email.com | Pass: Admin1234</p>
 				<p class="lead">User: user@email.com | Pass: User1234</p>
 				<a class="btn btn-lg btn-primary" href="{{path('app_login')}}" role="button">LOGIN</a>
+				
 			</div>
-		</main>
+
+			<div class="bg-light p-5 rounded">
+				<blockquote class="blockquote">
+				<p class="h4 " ><cite id="cite"></cite></p>
+				<blockquote class="blockquote">
+			</div>
+		</main> 
 	</body>
 {% endblock %}
