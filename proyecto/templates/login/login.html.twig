@@ -1,51 +1,42 @@
-{# templates/login/index.html.twig #}
 {% extends 'base.html.twig' %}
 
-{# ... #}
-
-{% block body %}
-    <link href="{{ asset('css/login.css') }}" rel="stylesheet"/>
-    {% if error %}
-        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
-
-<main class="form-signin">
-  <form action="{{ path('app_login') }}" method="post">
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-
-    <div class="form-floating">
-      <input type="text" id="username" name="_username" class="form-control"  placeholder="name@example.com" value="{{ last_username }}">
-      <label for="username">User name</label>
-    </div>
-    <div class="form-floating">
-      <input type="password" class="form-control"  id="password" name="_password" placeholder="Password">
-      <label for="password">Password</label>
-    </div>
-    {# If you want to control the URL the user is redirected to on success #}
-        <input type="hidden" name="_target_path" value="/user">
-
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
-    </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-  </form>
-</main>
-
+{% block title %}
+	Login
 {% endblock %}
 
-{# 
-    <form action="{{ path('app_login') }}" method="post">
-        <label for="username">Email:</label>
-        <input type="text" id="username" name="_username" value="{{ last_username }}">
+{% block body %}
+	<body>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="_password">
+		{% if error %}
+			<div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+		{% endif %}
 
-        If you want to control the URL the user is redirected to on success
-        <input type="hidden" name="_target_path" value="/users">
+		{{ include('common/_top_navbar.html.twig') }}
 
-        <button type="submit">login</button>
-    </form>
-{% endblock %} #}
+		<main class="container">
+			<form action="{{ path('app_login') }}" method="post">
+				<h1 class="h3 mb-3 fw-normal">Sign in</h1>
+
+				<div class="form-floating">
+					<input type="text" id="username" name="_username" class="form-control" placeholder="name@example.com" value="{{ last_username }}">
+					<label for="username">User name</label>
+				</div>
+				<div class="form-floating">
+					<input type="password" class="form-control" id="password" name="_password" placeholder="Password">
+					<label for="password">Password</label>
+				</div>
+				{# If you want to control the URL the user is redirected to on success #}
+				{# <input type="hidden" name="_target_path" value="/user"> #}
+
+				<div class="checkbox mb-3">
+					<label>
+						<input type="checkbox" value="remember-me">
+						Remember me
+					</label>
+				</div>
+				<button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+			</form>
+		</main>
+	</body>
+
+{% endblock %}

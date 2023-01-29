@@ -1,40 +1,22 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	Hello Symfony
+	Home
 {% endblock %}
 
 {% block body %}
-	<link href="{{ asset('css/landing.css') }}" rel="stylesheet"/>
-	<body class="d-flex h-100 text-center text-bg-dark">
+	<body>
 
-		<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-			<header class="mb-auto">
-				<div>
-					<nav class="nav nav-masthead justify-content-center float-md-end">
-						<a class="nav-link fw-bold py-1 px-0" href="/user">Users</a>
-						<a class="nav-link fw-bold py-1 px-0" href="/quote">Quote</a>
-						<a class="nav-link fw-bold py-1 px-0" href="/login">Login</a>
-						<a class="nav-link fw-bold py-1 px-0" href="/register">Register</a>
-					</nav>
-				</div>
-			</header>
+		{{ include('common/_top_navbar.html.twig') }}
 
-			<main class="px-3">
-				<h1>Make whit Symfony</h1>
-				<p class="lead">Desarrollo Web en entorno servidor.</p>
-				<p class="lead">
-					<a href="/login" class="btn btn-lg btn-secondary fw-bold border-white bg-white">LOGIN</a>
-				</p>
-			</main>
-
-			<footer class="mt-auto text-white-50">
-				<p>Proyecto symfony
-					<a href="https://github.com/aluman4290/dws/tree/main/proyecto/" class="text-white">GitHub</a>, by
-					<a href="https://aules.edu.gva.es/semipresencial/user/profile.php?id=11565" class="text-white">@jmanrique</a>.</p>
-			</footer>
-		</div>
+		<main class="container">
+			<div class="bg-light p-5 rounded">
+				<h1>Symfony Project</h1>
+				<p class="lead">Desarrollo web en entorno servidor. </p>
+				<p class="lead">Admin user: admin@email.com | Pass: Admin1234</p>
+				<p class="lead">User: user@email.com | Pass: User1234</p>
+				<a class="btn btn-lg btn-primary" href="{{path('app_login')}}" role="button">LOGIN</a>
+			</div>
+		</main>
 	</body>
-
-
 {% endblock %}
