@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	{{ include('common/_top_navbar.html.twig') }}
+
+	<main class="container">
+		<div class="bg-light p-5 rounded">
+			<h1>ERROR</h1>
+			<a class="btn btn-lg btn-primary" href="{{path('app_landing')}}" role="button">return</a>
+		</div>
+	</main>
+</body>{% endblock %}
