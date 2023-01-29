@@ -3,6 +3,9 @@
 {% block title %}Quote index{% endblock %}
 
 {% block body %}
+    {{ include('common/_top_navbar.html.twig') }}
+
+	<main class="container">
     <h1>Quote index</h1>
 
     <table class="table">
@@ -34,4 +37,5 @@
     </table>
 
     <a href="{{ path('app_quote_new') }}">Create new</a>
+    <main>
 {% endblock %}
